@@ -1,3 +1,5 @@
+package leetcode;
+
 /**
  * @author eumes
  * @date 2018/10/9
