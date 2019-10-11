@@ -1,10 +1,12 @@
-import java.util.*;
+package autumn;
 
-public class Main {
+import java.util.Scanner;
 
-    public static void main(String[] args){
+public class HuYu_19 {
 
-        System.out.println("hh");
+    public static void main(String[] args) {
+        System.out.println("hhh");
+//        Solution_1();
     }
 
     private static void Solution_1() {
