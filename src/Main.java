@@ -1,3 +1,4 @@
+import java.io.File;
 import java.util.*;
 
 public class Main {
@@ -5,6 +6,44 @@ public class Main {
     public static void main(String[] args){
 
         System.out.println("hh");
+        getTop20("E:\\lesson\\大数据理论与实践\\课件");
+    }
+
+    private static void getTop20(String directory) {
+        File file = new File(directory);
+        // get all files in the directory
+        File[] files = file.listFiles();
+        List<File> fileList = Arrays.asList(files);
+
+        // 文件大小降序排序
+        Collections.sort(fileList, (o1, o2) -> {
+            if (o1.length() < o2.length()) {
+                return 1;
+            } else if (o1.length() == o2.length()) {
+                return 0;
+            } else {
+                return -1;
+            }
+        });
+
+        int idx = 0;
+
+        for (File file1 : fileList) {
+            if (idx == 30) {
+                break;
+            }
+            if (file1.isDirectory()) {
+                System.out.println(file1.getTotalSpace());
+            }
+            double length = file1.length() / 1024.0 / 1024;
+            if (length > 1) {
+                System.out.println(length + "\t" + file1.getName() + "\tMark");
+            } else {
+                System.out.println(length + "\t" + file1.getName());
+            }
+            idx++;
+        }
+
     }
 
     private static void Solution_1() {
