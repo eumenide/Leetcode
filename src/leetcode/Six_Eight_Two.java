@@ -6,6 +6,8 @@ package leetcode;
  **/
 
 
+import java.util.ArrayDeque;
+import java.util.Queue;
 import java.util.Stack;
 
 /**
@@ -34,6 +36,8 @@ import java.util.Stack;
 public class Six_Eight_Two {
 
 	public static void main(String[] args) {
+		Queue<Integer> stack = new ArrayDeque<>();
+		System.out.println(stack.peek());
 		String[] ops1 = {"5", "2", "C", "D", "+"};
 		String[] op2 = {"5", "-2", "4", "C", "D", "9", "+", "+"};
 
