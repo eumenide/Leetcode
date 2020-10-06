@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.stack;
 
 /**
  * title: Build an Array With Stack Operations
