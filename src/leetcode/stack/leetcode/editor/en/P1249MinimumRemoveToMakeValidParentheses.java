@@ -68,7 +68,7 @@ import java.util.Stack;
 public class P1249MinimumRemoveToMakeValidParentheses {
     
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Solution_1249 solution = new Solution_1249();
         // TO TEST
         String s1 = "lee(t(c)o)de)";
         String s2 = "a)b(c)d";
@@ -84,7 +84,7 @@ public class P1249MinimumRemoveToMakeValidParentheses {
 }
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution_1249 {
     public String minRemoveToMakeValid(String s) {
         StringBuilder stringBuilder = new StringBuilder();
         char[] chars = s.toCharArray();

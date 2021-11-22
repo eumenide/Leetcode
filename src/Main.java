@@ -1,12 +1,21 @@
 import java.io.File;
+import java.math.BigDecimal;
 import java.util.*;
+
+import javax.print.DocFlavor.INPUT_STREAM;
+
+import jdk.nashorn.internal.ir.CallNode.EvalArgs;
 
 public class Main {
 
     public static void main(String[] args){
 
-        System.out.println("hh");
-        getTop20("E:\\lesson\\大数据理论与实践\\课件");
+        Calendar calendar = Calendar.getInstance();
+
+        
+        System.out.println(calendar.getTime());
+
+        //getTop20("E:\\lesson\\大数据理论与实践\\课件");
     }
 
     private static void getTop20(String directory) {
