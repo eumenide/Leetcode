@@ -52,7 +52,7 @@ import java.util.Deque;
 public class P143ReorderList {
     
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Solution_143 solution = new Solution_143();
         // TO TEST
         
     }
@@ -78,7 +78,7 @@ class ListNode_143 {
     ListNode_143(int val) { this.val = val; }
     ListNode_143(int val, ListNode_143 next) { this.val = val; this.next = next; }
 }
-class Solution {
+class Solution_143 {
     public void reorderList2(ListNode_143 head) {
         ListNode_143 fast = head;
         ListNode_143 slow = head;
