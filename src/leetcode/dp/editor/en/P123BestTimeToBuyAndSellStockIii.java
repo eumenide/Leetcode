@@ -191,7 +191,11 @@ class Solution_123 {
             // 第1次，没有已有利润
             first = Math.min(first, price);
             profit1 = Math.max(profit1, price - first);
-            // 第2次
+            // 此时，只对于第一次利润 是最低谷买、最高峰卖
+
+            // 第2次；在第一次交易的基础上：
+            // 支出最少时买入（第2次买入-第1次利润 = 总支出）
+            // 利润最大时卖出（第2次卖出 - 总支出 = 总利润）
             second = Math.min(second, price - profit1);
             profit2 = Math.max(profit2, price - second);
         }
