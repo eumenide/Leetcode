@@ -54,6 +54,13 @@ public class P55JumpGame {
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
+    /**
+     * 从左往后遍历，每次取剩余步数最大值(max(当前位置步数，上一位置最大步数 - 1))
+     * 当剩余最大步数 = 0 时，表示无法继续走下去。
+     *
+     * @param nums
+     * @return
+     */
     public boolean canJump(int[] nums) {
         int leftedStep = nums[0];
         for (int i = 1; i < nums.length; i++) {
