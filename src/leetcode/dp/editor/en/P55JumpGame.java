@@ -42,7 +42,7 @@ package leetcode.dp.editor.en;
 public class P55JumpGame {
     
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Solution_55 solution = new Solution_55();
         // TO TEST
         int[] nums = new int[] {2, 3, 1, 1, 4};
         System.out.println(solution.canJump(nums));
@@ -53,7 +53,7 @@ public class P55JumpGame {
 }
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution_55 {
     /**
      * 从左往后遍历，每次取剩余步数最大值(max(当前位置步数，上一位置最大步数 - 1))
      * 当剩余最大步数 = 0 时，表示无法继续走下去。
