@@ -67,7 +67,7 @@ package leetcode.editor.en;
  *     }
  * }
  */
-class Solution {
+class Solution_P99 {
     TreeNode first;
     TreeNode second;
     // prev应该比当前小
