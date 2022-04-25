@@ -53,7 +53,7 @@ package leetcode.editor.en;
     
  }
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution_P459 {
     public boolean repeatedSubstringPattern(String s) {
         int len = s.length();
         // 每段长度
