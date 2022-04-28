@@ -80,24 +80,20 @@ class Solution_150 {
         for (String token : tokens) {
             int num, tmp;
             switch (token) {
-                case "+":
-                    num = stack.pop() + stack.pop();
-                    break;
-                case "-":
+                case "+" -> num = stack.pop() + stack.pop();
+                case "-" -> {
                     tmp = stack.pop();
                     num = stack.pop() - tmp;
-                    break;
-                case "*":
+                }
+                case "*" -> {
                     tmp = stack.pop();
                     num = stack.pop() * tmp;
-                    break;
-                case "/":
+                }
+                case "/" -> {
                     tmp = stack.pop();
                     num = stack.pop() / tmp;
-                    break;
-                default:
-                    num = Integer.parseInt(token);
-                    break;
+                }
+                default -> num = Integer.parseInt(token);
             }
             stack.push(num);
         }
