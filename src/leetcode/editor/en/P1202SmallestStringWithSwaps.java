@@ -83,7 +83,7 @@ import java.util.PriorityQueue;
     
  }
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution_P1202 {
     // 记录每个位置的根
     int[] union;
     // 记录每个分组 及其 对应的字符；此处利用优先队列排序
