@@ -1,9 +1,19 @@
 import java.io.File;
 import java.util.*;
+import java.util.function.BinaryOperator;
+import java.util.function.Function;
 
 public class Main {
 
     public static void main(String[] args){
+        Map<Character, BinaryOperator<Integer>> map = new HashMap<>();
+        map.put('+', Integer::sum);
+        map.put('-', (a, b) -> a - b);
+
+        Integer apply = map.get('-').apply(1, 3);
+        Stack<Integer> stack = new Stack<>();
+
+        PriorityQueue<Map.Entry<Integer, Integer>> queue = new PriorityQueue<>(Comparator.comparingInt(Map.Entry::getValue));
 
         System.out.println("hh");
         getTop20("E:\\lesson\\大数据理论与实践\\课件");

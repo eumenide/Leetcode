@@ -47,7 +47,7 @@ package leetcode.editor.en;
     
  }
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution_P905 {
     public int[] sortArrayByParity(int[] nums) {
         int le = 0, ri = nums.length - 1;
         while (le <= ri) {
