@@ -66,7 +66,7 @@ import leetcode.dp.editor.en.ListNode;
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+class Solution_P25 {
     public ListNode reverseKGroup(ListNode head, int k) {
         // 终止条件
         if (head == null) {
