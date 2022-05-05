@@ -74,14 +74,6 @@ public class P1721SwappingNodesInALinkedList {
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-}
-
 class Solution_1721 {
     public ListNode swapNodes(ListNode head, int k) {
         // 0节点

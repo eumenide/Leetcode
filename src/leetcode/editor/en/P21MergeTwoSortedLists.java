@@ -40,6 +40,8 @@
 
 package leetcode.editor.en;
 
+import leetcode.dp.editor.en.ListNode;
+
 /**
  * Merge Two Sorted Lists
  * 
@@ -83,20 +85,6 @@ class Solution_P21 {
         }
 
         return dummy.next;
-    }
-
-    static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
