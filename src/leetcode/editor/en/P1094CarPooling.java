@@ -56,7 +56,7 @@ package leetcode.editor.en;
     
  }
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution_P1094 {
     public boolean carPooling(int[][] trips, int capacity) {
         // 差分数组
         int[] diff = new int[1001];
