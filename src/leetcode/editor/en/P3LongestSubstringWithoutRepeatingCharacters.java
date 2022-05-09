@@ -55,7 +55,7 @@ package leetcode.editor.en;
     
  }
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution_P3 {
 
     public int lengthOfLongestSubstring(String s) {
         // 这里记录窗口中每个字符出现的最后一个位置
