@@ -38,7 +38,7 @@ package leetcode.dp.editor.en;
 public class P34FindFirstAndLastPositionOfElementInSortedArray {
     
     public static void main(String[] args) {
-        Solution_34 solution = new Solution_34();
+//        Solution_34 solution = new Solution_34();
         // TO TEST
         
     }
@@ -47,7 +47,7 @@ public class P34FindFirstAndLastPositionOfElementInSortedArray {
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution_34 {
-    public int[] searchRange(int[] nums, int target) {
+    public int[] searchRange_1(int[] nums, int target) {
         int left = 0, right = nums.length - 1;
         while (left <= right) {
             int mid = left + ((right - left) >> 1);
@@ -56,6 +56,7 @@ class Solution_34 {
             } else if (nums[mid] > target) {
                 right = mid - 1;
             } else {
+                // 这里最差情况会有 O(n)
                 int lb = mid, rb = mid;
                 while (lb > left && nums[lb - 1] == target) {
                     lb--;
@@ -67,6 +68,47 @@ class Solution_34 {
         }
 
         return new int[] {-1, -1};
+    }
+
+    // 左右边界，平均 2logn
+    public int[] searchRange(int[] nums, int target) {
+        return new int[]{leftBound(nums, target), rightBound(nums, target)};
+    }
+
+    private int rightBound(int[] nums, int target) {
+        int le = 0, ri = nums.length - 1;
+        while (le <= ri) {
+            int mid = le + ((ri - le) >> 1);
+            if (nums[mid] > target) {
+                ri = mid - 1;
+            } else {
+                le = mid + 1;
+            }
+        }
+
+        // 越界
+        if (ri < 0 || nums[ri] != target) {
+            return -1;
+        }
+        return ri;
+    }
+
+    private int leftBound(int[] nums, int target) {
+        int le = 0, ri = nums.length - 1;
+        while (le <= ri) {
+            int mid = le + ((ri - le) >> 1);
+            if (nums[mid] < target) {
+                le = mid + 1;
+            } else if (nums[mid] >= target) {
+                ri = mid - 1;
+            }
+        }
+
+        // 越界
+        if (le >= nums.length || nums[le] != target) {
+            return -1;
+        }
+        return le;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

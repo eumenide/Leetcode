@@ -48,7 +48,7 @@ package leetcode.dp.editor.en;
 public class P11ContainerWithMostWater {
     
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Solution_P11 solution = new Solution_P11();
         // TO TEST
         int[] height = new int[] {1, 8, 6, 2, 5, 4, 8, 3, 7};
         System.out.println(solution.maxArea(height));
@@ -60,7 +60,7 @@ public class P11ContainerWithMostWater {
 }
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution_P11 {
     public int maxArea(int[] height) {
         // 按最大width逐渐缩短
         // 先取[0,n-1]，则 area = (n-1-0) * min(height[0], height[n-1])

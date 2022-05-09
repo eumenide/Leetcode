@@ -44,7 +44,7 @@ package leetcode.dp.editor.en;
 public class P203RemoveLinkedListElements {
     
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Solution_203 solution = new Solution_203();
         // TO TEST
         
     }

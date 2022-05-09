@@ -69,7 +69,7 @@ package leetcode.dp.editor.en;
 public class P707DesignLinkedList {
     
     public static void main(String[] args) {
-        Solution solution = new Solution();
+//        Solution solution = new Solution();
         // TO TEST
         
     }
