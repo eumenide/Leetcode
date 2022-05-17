@@ -66,7 +66,7 @@ import java.util.PriorityQueue;
     
  }
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution_P743 {
     public int networkDelayTime(int[][] times, int n, int k) {
         // 邻接矩阵
         int[][] m = new int[n + 1][n + 1];
