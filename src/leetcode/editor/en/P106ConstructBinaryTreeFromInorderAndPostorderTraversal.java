@@ -68,7 +68,7 @@ import java.util.Map;
  *     }
  * }
  */
-class Solution {
+class Solution_P106 {
     // 记录中序序列中值与索引关系
     Map<Integer, Integer> map = new HashMap<>();
     public TreeNode buildTree(int[] inorder, int[] postorder) {
