@@ -63,7 +63,7 @@ import java.util.Map;
     
  }
 //leetcode submit region begin(Prohibit modification and deletion)
-class Codec {
+class Codec_Solution_P535 {
 
     Map<String, String> codeMap = new HashMap<>();
     Map<String, String> urlMap = new HashMap<>();

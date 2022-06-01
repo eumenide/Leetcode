@@ -57,7 +57,7 @@ import java.util.Map;
     
  }
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+class Solution_P318 {
     // 充分利用位运算 - O(n ^ 2)
     public int maxProduct(String[] words) {
         int res = 0;
