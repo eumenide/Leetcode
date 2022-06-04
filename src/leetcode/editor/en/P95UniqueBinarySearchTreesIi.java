@@ -63,7 +63,7 @@ import java.util.List;
  *     }
  * }
  */
-class Solution {
+class Solution_P95 {
     // 记录[i, j] 之间数字组成的BST
     List<TreeNode>[][] memo;
     public List<TreeNode> generateTrees(int n) {
