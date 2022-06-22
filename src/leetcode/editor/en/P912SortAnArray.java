@@ -21,6 +21,8 @@
 
 package leetcode.editor.en;
 
+import java.util.Random;
+
 /**
  * Sort an Array
  * 
@@ -76,6 +78,72 @@ class Solution_P912 {
                 nums[idx] = tmpA[j++];
             }
         }
+    }
+}
+
+class QuickSort {
+    public int[] sortArray(int[] nums) {
+        shuffle(nums);
+        quickSort(nums, 0, nums.length - 1);
+        return nums;
+    }
+
+    private void quickSort(int[] nums, int le, int ri) {
+        // 终止条件
+        if (le >= ri) {
+            return;
+        }
+
+        // 先排好一个元素
+        int p = partition(nums, le, ri);
+        // 递归快速排序左边&右边
+        quickSort(nums, le, p - 1);
+        quickSort(nums, p + 1, ri);
+    }
+
+    // 排好一个元素的位置p，使得p左边均≤它，右边均＞它
+    private int partition(int[] nums, int le, int ri) {
+        int piv = nums[le];
+        int i = le + 1, j = ri;
+        while (i <= j) {
+            // 先找到左边第一个＞piv的位置
+            while (i <= j && nums[i] <= piv) {
+                i++;
+            }
+            // 再找到右边第一个≤piv的位置
+            while (i <= j && nums[j] > piv) {
+                j--;
+            }
+
+            // 超出范围，直接跳出
+            if (i >= j) {
+                break;
+            }
+
+            // 交换i/j
+            swap(nums, i, j);
+        }
+
+        // 将piv放到找到的位置j上
+        swap(nums, le, j);
+        return j;
+    }
+
+    // 打乱
+    private void shuffle(int[] nums) {
+        Random rd = new Random();
+        int n = nums.length;
+        for (int i = 0; i < n; i++) {
+            int idx = rd.nextInt(n - i);
+            swap(nums, i, idx);
+        }
+    }
+
+    // 交换nums中的两个位置
+    private void swap(int[] nums, int i, int j) {
+        int tmp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = tmp;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

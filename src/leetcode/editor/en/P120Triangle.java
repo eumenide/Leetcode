@@ -45,6 +45,7 @@
 package leetcode.editor.en;
 
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * Triangle
@@ -56,7 +57,30 @@ import java.util.List;
     public static void main(String[] args) {
 //        Solution_P120 solution = new Solution_P120();
         // TO TEST
-        
+        Scanner in = new Scanner(System.in);
+        String str = in.nextLine();
+        String target = in.nextLine();
+        char[] chars = new char[2];
+
+        // target字符记录大小写
+        chars[0] = target.charAt(0);
+        System.out.println(chars[0] >= 'a' && chars[0] <= 'z');
+        System.out.println(chars[0] >= 'A' && chars[0] <= 'Z');
+        if (chars[0] >= 'a' && chars[0] <= 'z') {
+            chars[1] = (char)(chars[0] + 'A' - 'a');
+        } else if (chars[0] >= 'A' && chars[0] <= 'Z') {
+            chars[1] = (char)(chars[1] + 'a' - 'A');
+        }
+        System.out.println(chars[0]);
+        System.out.println(chars[1]);
+        // 遍历寻找
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == chars[0] || str.charAt(i) == chars[1]) {
+                count++;
+            }
+        }
+        System.out.println(count);
     }
     
  }
